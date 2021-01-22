@@ -18,9 +18,9 @@ Links:
 
 ## Schematic of folders structure
 
-'GroupWise_VS_MDR.py' -> main python script to run in order to perform the comparative study and to generate the results described in the paper.
+`GroupWise_VS_MDR.py` -> main python script to run in order to perform the comparative study and to generate the results described in the paper.
 
-'Github Repository' -> parent folder
+`Github Repository` -> parent folder
                   Inside it are stored all the patient data that will be processed, each patient in its own folder.
                   Inside it are also stored the folders: Elastix_Parameters_Files and AIFs as explained by the schematic below.
                   The path for this folder is given in line 1235 of "GroupWise_VS_MDR.py" as value for the global variable DATA_PATH and this can be changed

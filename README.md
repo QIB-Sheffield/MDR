@@ -13,6 +13,7 @@ Finally, you must have `elastix` installed in your machine in order to perform t
 Links:
 
 [Elastix Main Page](https://elastix.lumc.nl/)
+
 [Elastix Download](https://github.com/SuperElastix/elastix/releases/tag/5.0.1)
 
 
@@ -55,9 +56,8 @@ Github Repository
 ## Notes regarding `GroupWise_VS_MDR.py`
  
 1) there is a global variable called TECHNIQUE in line 1237
-- if it is set equal to 1 (int) it performs GroupWise model-free image registration
-- if it is set equal to 2 (int) it performs MDR model-driven registration
-
+   - if it is set equal to 1 (int) it performs GroupWise model-free image registration
+   - if it is set equal to 2 (int) it performs MDR model-driven registration
 
 
 2) there is a global variable called SEQUENCES (line 1217) which is a list of python strings and it will indicate which MR acquisitions will be motion corrected,

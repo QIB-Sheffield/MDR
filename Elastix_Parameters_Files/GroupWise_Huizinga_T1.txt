@@ -1,0 +1,76 @@
+// *********************
+// * ImageTypes
+// *********************
+(FixedInternalImagePixelType "float")
+(MovingInternalImagePixelType "float")
+(FixedImageDimension 3)
+(MovingImageDimension 3)
+
+(UseDirectionCosines "true")
+
+// *********************
+// * Components
+// *********************
+(Registration "MultiResolutionRegistration")
+(ImageSampler "RandomCoordinate")
+(Interpolator "ReducedDimensionBSplineInterpolator")
+(ResampleInterpolator "FinalReducedDimensionBSplineInterpolator")
+(Resampler "DefaultResampler")
+(BSplineInterpolationOrder 1)
+(FinalBSplineInterpolationOrder 1)
+(FixedImagePyramid "FixedSmoothingImagePyramid")
+(MovingImagePyramid "MovingSmoothingImagePyramid")
+(Optimizer "AdaptiveStochasticGradientDescent")
+(HowToCombineTransforms "Compose")
+(Transform "BSplineStackTransform")
+
+//Choose one of the following groupwise metrics:
+(Metric "PCAMetric2")
+(NumberOfHistogramBins 32)
+
+//Specific for the PCAMetric
+(NumEigenValues 3)
+
+// *********************
+// * Groupwise Metric settings
+// *********************
+(SubtractMean "true")
+(MovingImageDerivativeScales 1 1 0)
+
+//Choose one of the following settings:
+(FinalGridSpacingInVoxels 16)
+
+
+// *********************
+// * Optimizer settings
+// *********************
+(NumberOfResolutions 4)
+(AutomaticParameterEstimation "true")
+(ASGDParameterEstimationMethod "Original")
+(MaximumNumberOfIterations 500)
+
+// *********************
+// * Pyramid settings
+// *********************
+(ImagePyramidSchedule 8 8 0  4 4 0 2 2 0 1 1 0)
+
+// *********************
+// * Sampler parameters
+// *********************
+(NumberOfSpatialSamples 2048)
+(NewSamplesEveryIteration "true")
+(CheckNumberOfSamples "true")
+
+// *********************
+// * Mask settings
+// *********************
+(ErodeMask "false")
+(ErodeFixedMask "false")
+
+// *********************
+// * Output settings
+// *********************
+(DefaultPixelValue 0)
+(WriteResultImage "true")
+(ResultImagePixelType "float")
+(ResultImageFormat "mhd")

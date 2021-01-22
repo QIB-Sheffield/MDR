@@ -25,7 +25,7 @@ Links:
                   Inside it are also stored the folders: Elastix_Parameters_Files and AIFs as explained by the schematic below.
                   The path for this folder is given in line 1235 of "GroupWise_VS_MDR.py" as value for the global variable DATA_PATH and this can be changed
 
-
+.
 +-- AIFs (this folder is needed for DCE data and contains the aif for each patient in a .txt form)
 |    |
 |    +-- patient_001
@@ -91,7 +91,8 @@ Links:
 
 3) the global variable CORRESPONDANCE (line 1227) is a dictionary that has as key values the different acquisition mechanisms (the strings found in the variable POOL_OF_SEQUENCES (line 1216))
    
-   and for each key CORRESPONDANCE contains a list of three integers+-- the first shows the number of folder that corresponds to the data of the acquired sequence 
+   and for each key CORRESPONDANCE contains a list of three integers.
+                                                                    +-- the first shows the number of folder that corresponds to the data of the acquired sequence 
                                                                     |   (i.e. the current implementation follows the convention: T1 -> 19, DTI -> 31, DCE -> 39)
                                                                     |
                                                                     +-- the second shows the number of files for each acquired sequence

@@ -1,0 +1,8 @@
+tqdm
+scikit-image
+numpy
+SimpleITK
+pydicom
+scipy
+opencv-python
+pandas
